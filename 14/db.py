@@ -1,9 +1,6 @@
 import sqlite3
 from typing import Dict, List
 import random
-"""Тема таблиц вина"""
-# lxml строим xml из sql
-# а ещё тоже самое в джанго
 
 
 def sqlite_connection(func):
