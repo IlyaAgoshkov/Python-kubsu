@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить сорт</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Добавить преподавателя в базу данных</h1>
+    <form method="post" action="../cgi-bin/add_instructor.py">
+        <label>
+            Имя преподавателя:
+            <input type="text" name="field-instructor_name">
+        </label><br>
+        <label>
+            Email:
+            <input name="field-email">
+        </label><br>
+        <input class="btn btn-success" type="submit" value="Отправить">
+    </form><br>
+    <a class="btn btn-success" href="../templates/index.html">На главную</a><br>
+</body>
+</html>
