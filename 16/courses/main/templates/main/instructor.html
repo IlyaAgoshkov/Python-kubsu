@@ -1,0 +1,27 @@
+{% extends 'main/layout.html'%}
+{% block title %}
+    Преподаватели
+{% endblock %}
+
+
+{% block content %}
+    <div class="features">
+        <h1>Преподаватели</h1>
+        <div class="bd">
+                 <p>id</p>
+                 <p>Имя</p>
+                 <p>Почта</p>
+            </div>
+        {% for el in instructor %}
+            <div class="bd">
+                 <p>{{ el.instructor_id}}</p>
+                 <p>{{ el.instructor_name}}</p>
+                 <p>{{ el.email}}</p>
+            </div>
+        {% endfor %}
+        <form action="{% url 'add_instructor' %}">
+        <button class="btn btn-warning">Добавить преподавателя</button>
+        </form>
+    </div>
+
+{% endblock %}

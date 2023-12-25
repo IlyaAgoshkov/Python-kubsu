@@ -1,0 +1,20 @@
+{% extends 'main/layout.html'%}
+{% block title %}
+    Добавление курсов
+{% endblock %}
+
+
+{% block content %}
+    <div class="features">
+        <h1>Добавление курсов</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.course_name }}<br>
+            {{ form.instructor }}<br>
+            {{ form.subjects }}<br>
+            <span>{{ error }}</span>
+            <button class="btn btn-warning" type="submit">Добавить</button>
+        </form>
+    </div>
+
+{% endblock %}

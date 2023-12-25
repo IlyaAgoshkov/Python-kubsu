@@ -1,0 +1,124 @@
+body {
+    background: #2c2c2c;
+}
+
+aside {
+    float: left;
+    background: #181818;
+    width: 20%;
+    padding: 2.5%;
+    height: 100vh;
+    color: white;
+    border-right: 5px solid #4d4d4d;
+}
+
+aside img {
+    width: 80px;
+    float: left;
+}
+
+aside .logo {
+    font-size: 40px;
+    margin-left: 10px;
+    font-weight: bold;
+    position: relative;
+    top: -5px;
+}
+
+aside h3 {
+    margin-top: 50px;
+    font-size: 28px;
+}
+
+aside ul {list-style: none}
+
+aside ul li {
+    color: white;
+    display: block;
+    margin-top: 20px;
+    transition: all .6s ease;
+}
+
+aside ul li:hover, aside ul a{
+    color: darkred;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+.features {
+    float: left;
+    color: white;
+    margin-top: 100px;
+    text-align: center;
+    width: 75%;
+}
+
+.features h1{font-size: 50px}
+.features p{max-width: 400px; margin: 20px auto}
+
+.bd {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.bd p {
+    margin: 20px;
+    flex: 1; /* Равномерное распределение пространства для всех элементов */
+}
+
+form {
+    margin-left: 32%;
+    width: 500px;
+    margin-top: 50px;
+}
+
+/* Стили */
+.data-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.data-box {
+    background-color: yellow;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: 30%; /* Регулируйте ширину в зависимости от макета */
+    box-sizing: border-box;
+}
+
+.data-box h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.data-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.data-box ul li {
+    margin-bottom: 5px;
+}
+
+.btn-container {
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}

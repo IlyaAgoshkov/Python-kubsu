@@ -4,7 +4,7 @@ import sqlite3
 from adapter import import_from_file
 from db import init_db, sqlite_connection
 
-PATH = 'courses.xml'
+PATH = 'db.db'
 
 cgitb.enable()
 init_db()
@@ -25,7 +25,7 @@ def xml_to_sql(con: sqlite3.Connection):
     # con.row_factory = sqlite3.Row
     cur = con.cursor()
     cur.executemany("""
-        INSERT INTO WINES (WINE_ID, WINE_EXTRACT, SWEETNESS_ID, WINE_GRADE_ID, COUNTRY_ID, DESCRIPTION) VALUES (?, ?, ?, ?, ?, ?);
+        INSERT INTO Courses (CourseName, InstructorID) VALUES (?, ?);
     """, ins)
 
 

@@ -1,0 +1,18 @@
+{% extends 'main/layout.html'%}
+{% block title %}
+    Добавление преподавателей
+{% endblock %}
+
+
+{% block content %}
+    <div class="features">
+        <h1>Добавление преподавателей</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.instructor_name }}<br>
+            {{ form.instructor_id }}<br>
+            {{ form.email }}<br>
+            <button class="btn btn-warning" type="submit">Добавить</button>
+        </form>
+    </div>
+{% endblock %}

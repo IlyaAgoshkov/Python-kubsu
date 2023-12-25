@@ -1,0 +1,41 @@
+{% extends 'main/layout.html'%}
+{% block title %}
+    Все данные из базы данных
+{% endblock %}
+
+{% block content %}
+    <div class="data-section">
+        <div class="data-box">
+            <h1>Преподаватели</h1>
+            <ul>
+                {% for instructor in instructors %}
+                    <li>{{ instructor.instructor_id}}  {{ instructor.instructor_name }}  {{ instructor.email }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="data-box">
+            <h1>Предметы</h1>
+            <ul>
+                {% for subject in subjects %}
+                    <li>{{ subject.instructor_id}} {{ subject.subject_name }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="data-box">
+            <h1>Курсы</h1>
+            <ul>
+                {% for course in courses %}
+                    <li>{{ course.instructor_id}} {{ course.course_name }} - {{ course.instructor.instructor_name }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <div class="btn-container">
+            <button class="btn">Изменить данные</button>
+            <button class="btn">Удалить данные</button>
+            <button class="btn">Добавить преподавателя</button>
+        </div>
+    </div>
+{% endblock %}

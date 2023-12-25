@@ -1,0 +1,25 @@
+{% extends 'main/layout.html'%}
+{% block title %}
+    Предметы
+{% endblock %}
+
+
+{% block content %}
+    <div class="features">
+        <h1>Предметы</h1>
+        <div class="bd">
+                 <p>id</p>
+                 <p>Название предмета</p>
+            </div>
+        {% for el in subject %}
+            <div class="bd">
+                 <p>{{el.instructor_id}}</p>
+                 <p>{{ el.subject_name}}</p>
+            </div>
+        {% endfor %}
+        <form action="{% url 'add_subject' %}">
+        <button class="btn btn-warning">Добавить предмет</button>
+        </form>
+    </div>
+
+{% endblock %}

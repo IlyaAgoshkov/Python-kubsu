@@ -1,0 +1,27 @@
+{% extends 'main/layout.html'%}
+{% block title %}
+    Курсы
+{% endblock %}
+
+
+{% block content %}
+    <div class="features">
+        <h1>Курсы</h1>
+        <div class="bd">
+                 <p>Название курса</p>
+                 <p>Имя преподавателя</p>
+                 <p>Предмет</p>
+            </div>
+        {% for el in course %}
+            <div class="bd">
+                 <p>{{ el.course_name}}</p>
+                 <p>{{ el.instructor}}</p>
+                 <p>{{ el.subjects}}</p>
+            </div>
+        {% endfor %}
+        <form action="{% url 'add_courses' %}">
+        <button class="btn btn-warning">Добавить</button>
+        </form>
+    </div>
+
+{% endblock %}
