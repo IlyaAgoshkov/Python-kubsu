@@ -1,30 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
-from django.core.validators import RegexValidator
-from django.db import models
 
 
-class CustomUser(AbstractUser):
-    # Поля пользователя
-    first_name = models.CharField('Имя', max_length=30, validators=[
-        RegexValidator(
-            r'^[А-ЯЁ][а-яё]+$',
-            message='Имя должно начинаться с прописной буквы и содержать только кириллицу.'
-        )
-    ])
-    last_name = models.CharField('Фамилия', max_length=30, validators=[
-        RegexValidator(
-            r'^[А-ЯЁ][а-яё]+$',
-            message='Фамилия должна начинаться с прописной буквы и содержать только кириллицу.'
-        )
-    ])
-    middle_name = models.CharField('Отчество', max_length=30, validators=[
-        RegexValidator(
-            r'^[А-ЯЁ][а-яё]+$',
-            message='Отчество должно начинаться с прописной буквы и содержать только кириллицу.'
-        )
-    ])
-    email = models.EmailField('E-mail', unique=True)
 
 
 class Instructor(models.Model):
