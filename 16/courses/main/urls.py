@@ -1,4 +1,3 @@
-import signup as signup
 from django.urls import path, include
 from . import views
 urlpatterns = [
@@ -10,5 +9,6 @@ urlpatterns = [
     path('add_courses/', views.add_courses, name='add_courses'),
     path('add_subject/', views.add_subject, name='add_subject'),
     path('add_instructor/', views.add_instructor, name='add_instructor'),
+    path('delete_all', views.delete_all, name='delete_all'),
     path('users/', include('django.contrib.auth.urls')),
 ]

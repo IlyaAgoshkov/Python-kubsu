@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse
 from .models import Course, Subject, Instructor
 from .forms import CourseForm, SubjectForm, InstructorForm
 from django.shortcuts import render, redirect
@@ -72,3 +72,10 @@ def add_instructor(request):
         'error': error
     }
     return render(request, 'main/add_instructor.html', data)
+
+
+def delete_all(request):
+    Instructor.objects.all().delete()
+    Course.objects.all().delete()
+    Subject.objects.all().delete()
+    return HttpResponse(f'Данные удалены')
