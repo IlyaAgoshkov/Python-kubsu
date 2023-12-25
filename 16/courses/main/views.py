@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Course, Subject, Instructor
 from .forms import CourseForm, SubjectForm, InstructorForm
+from django.shortcuts import render, redirect
 def index(request):
     return render(request, 'main/index.html')
 
@@ -47,7 +48,7 @@ def add_subject(request):
         if form.is_valid():
             form.save()
         else:
-            error = "Вы неверно заполнили данные"  # You incorrectly filled out the data
+            error = "Вы неверно заполнили данные"
     else:
         form = SubjectForm()
     data = {
@@ -63,7 +64,7 @@ def add_instructor(request):
         if form.is_valid():
             form.save()
         else:
-            error = "Вы неверно заполнили данные"  # You incorrectly filled out the data
+            error = "Вы неверно заполнили данные"
     else:
         form = InstructorForm()
     data = {

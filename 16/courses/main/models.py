@@ -1,5 +1,6 @@
+from django.contrib.auth.models import AbstractUser
 from django.db import models
-
+from django.contrib.auth.forms import UserCreationForm
 
 
 
@@ -40,3 +41,6 @@ class Course(models.Model):
     class Meta:
         verbose_name = 'Курс'
         verbose_name_plural = 'Курсы'
+
+
+

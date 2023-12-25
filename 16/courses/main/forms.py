@@ -1,6 +1,7 @@
-from .models import Course, Subject, Instructor
-from django.forms import ModelForm, TextInput, EmailInput, Select, SelectMultiple
+from django.core.exceptions import ValidationError
 
+from .models import Course, Subject, Instructor
+from django.forms import ModelForm, TextInput, EmailInput
 
 class CourseForm(ModelForm):
     class Meta:
@@ -47,3 +48,4 @@ class InstructorForm(ModelForm):
                 'placeholder': 'Введите email'
             })
         }
+
